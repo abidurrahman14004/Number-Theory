@@ -8,6 +8,7 @@ if(n%2==0) return false;
 for(int i=2;i<=sqrt(n);i++){
 
     if(n%i==0) return false;
+<<<<<<< HEAD
 }
      return true;
 }
@@ -23,4 +24,10 @@ else cout<<"no"<<endl;
     
 }
 
+=======
+    else return true;
+}
+
+
+>>>>>>> 2151dc828c41271d7ece90f1fc8798cc76caa0c8
 }
