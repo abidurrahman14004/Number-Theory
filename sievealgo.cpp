@@ -2,23 +2,25 @@
 #include<bits/stdc++.h>
 
 using namespace std;
+typedef unsigned long long int llu;
+vector<int>v;
+bool prime [900000000];
+int n=500000000;
 
-void solve( int n){
+void solve(){
 
-int prime[n+3];
-memset(prime ,0,sizeof(prime));
 
 for (int i = 2; i < sqrt(n);i++){
     
-    if(prime[i]==0){
+    if(prime[i]==false){
         for(int j=i*i;j<=n;j+=i){
-            prime[j]=1;
+            prime[j]=true;
         }
     }
      
 }
 for(int i = 1; i <= n;i++){
-    if(prime[i]==0) cout<<i<< " ";
+    if(prime[i]==false) v.push_back(i);
 }
 
 cout<<endl;
@@ -26,9 +28,10 @@ cout<<endl;
 }
 
 int main(){
+solve();
 int n;
 cin>>n;
-solve(n);
+cout<<v[n-1]<<endl;
  
    return 0;
 }
